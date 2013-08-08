@@ -1,10 +1,10 @@
-<h2>This is projects index action</h2>
+<h2>Projects</h2>
+<ul>
+<% @projects.each do |project| %>
+<li><%= link_to project.name, project %> 
+	| <%= link_to 'Edit', edit_project_path(project)%>
+	| <%= link_to 'Destory', project, method: :delete, data: {confirm: 'Are you sure?' } %>
 
-
-
-<%= link_to new_project_path do %>
-
-	a bunch of 
-	of 
-	text
-	<% end %>
+</li>
+<% end %>
+</ul>
