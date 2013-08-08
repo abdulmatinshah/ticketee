@@ -27,6 +27,7 @@ GEM
       tzinfo (~> 0.3.37)
     arel (4.0.0)
     atomic (1.1.12)
+    bcrypt-ruby (3.0.1-x86-mingw32)
     builder (3.1.4)
     capybara (2.1.0)
       mime-types (>= 1.16)
@@ -52,6 +53,10 @@ GEM
       cucumber (>= 1.1.8)
       nokogiri (>= 1.5.0)
     database_cleaner (1.1.1)
+    devise (1.5.4)
+      bcrypt-ruby (~> 3.0)
+      orm_adapter (~> 0.0.3)
+      warden (~> 1.1)
     diff-lcs (1.2.4)
     erubis (2.7.0)
     execjs (1.4.0)
@@ -83,6 +88,7 @@ GEM
       mini_portile (~> 0.5.0)
     nokogiri (1.6.0-x86-mingw32)
       mini_portile (~> 0.5.0)
+    orm_adapter (0.0.7)
     polyglot (0.3.3)
     rack (1.5.2)
     rack-test (0.6.2)
@@ -146,6 +152,8 @@ GEM
     uglifier (2.1.2)
       execjs (>= 0.3.0)
       multi_json (~> 1.0, >= 1.0.2)
+    warden (1.2.1)
+      rack (>= 1.0)
     xpath (2.0.0)
       nokogiri (~> 1.3)
 
@@ -153,10 +161,12 @@ PLATFORMS
   x86-mingw32
 
 DEPENDENCIES
+  bcrypt-ruby (~> 3.0.0)
   capybara
   coffee-rails (~> 4.0.0)
   cucumber-rails
   database_cleaner
+  devise
   factory_girl
   jbuilder (~> 1.2)
   jquery-rails

@@ -17,6 +17,7 @@ class ProjectsController < ApplicationController
     end
   end
   def show
+    @tickets = @project.tickets
   end
   def edit
   end

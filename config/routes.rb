@@ -1,4 +1,5 @@
 Ticketee::Application.routes.draw do
+  devise_for :users
   # resources :projects#, only: [:new, :index]
   resources :projects do
     resources :tickets

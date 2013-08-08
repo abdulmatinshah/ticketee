@@ -2,6 +2,6 @@
 
 <h2>Show project</h2>
 <%= @project.name %>
-
+<%= render 'ticket', collection: @tickets %>
 <br />
 <%= link_to "Root", root_path %>

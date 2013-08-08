@@ -1,0 +1,8 @@
+<h3>Tickets</h3>
+<%#= debug(@tickets) %>
+<% @tickets.each do |ticket| %>
+<ul>
+	<li> <%= link_to ticket.title, [@project, ticket] %> 	</li>
+</ul>
+<% end %>
+
