@@ -1,4 +1,5 @@
 class TicketsController < ApplicationController
+    before_action :authenticate_user!, except: [:index, :show]
     before_action :find_project
     before_action :find_ticket, only: [:show, :edit, :create, :update, :destroy]
     def new
@@ -7,7 +8,7 @@ class TicketsController < ApplicationController
     def create
         respond_to do |format|
             
-            @ticket = @project.tickets.build(ticket_params,'l')
+            @ticket = @project.tickets.build(ticket_params.merge!(user: current_user))
             # @ticket = @project.tickets.new(ticket_params)
             # @project.tickets << @ticket
             if @project.save

@@ -5,3 +5,8 @@
 <%= render 'ticket', collection: @tickets %>
 <br />
 <%= link_to "Root", root_path %>
+<%= admins_only do %>
+<%= link_to "Edit Project", edit_project_path(@project) %>
+<%= link_to "Delete Project", project_path(@project), :method => :delete,
+:confirm => "Are you sure you want to delete this project?" %>
+<% end %>
